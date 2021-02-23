@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import './RegisterForm.css'
+
 //Log In is link to Login Page
 // Full Name, username and password required
 //Register Leads you to My Habits Page
@@ -20,22 +22,22 @@ class RegisterForm extends Component {
                     <br/>
                     <div className = 'username'>
                         <label htmlFor = 'RegisterForm__username'>
-                            User name
-                        </label>
+                            Username
+                        </label> {' '}
                         <input type = 'text' name = 'RegisterForm__username' id = 'RegisterForm__username' required/>
                     </div>
                     <br/>
                     <div className = 'password'>
                         <label htmlFor = 'RegisterForm__password'>
                             Password 
-                        </label>
+                        </label> {' '}
                         <input type = 'password' name = 'RegisterForm__password' id = 'RegisterForm__password' required/>
                     </div>
                     <br/>
                     <div className = 'repeat_password'>
                         <label htmlFor = 'RegisterForm__repeat_password'>
                             Repeat Password
-                        </label>
+                        </label> {' '}
                         <input type = 'password' name = 'RegisterForm__repeat_password' id = 'RegisterForm__repeat_password' required/>
                     </div>
                     <button type = 'submit'>Register</button>
