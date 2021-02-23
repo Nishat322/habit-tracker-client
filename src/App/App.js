@@ -5,6 +5,7 @@ import LandingPage from '../LandingPage/LandingPage'
 import RegisterForm from '../RegisterForm/RegisterForm'
 import LoginForm from '../LoginForm/LoginForm'
 import HabitApp from '../HabitApp/HabitApp'
+import AddHabit from '../AddHabit/AddHabit'
 
 import STORE from '../store'
 import './App.css'
@@ -19,6 +20,7 @@ class App extends Component {
         <RegisterForm/>
         <LoginForm/>
         <HabitApp habits = {habits}/>
+        <AddHabit/>
       </div>
     )
   }

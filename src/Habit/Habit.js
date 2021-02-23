@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 
-
+import './Habit.css'
 //tapping on the name of the habit leads to an extenstion which shows the motivating message
+//Edit will allow you to edit the habit => leads to the edit form
+//Delete will allow you to delete the habit
 class Habit extends Component {
 
 
@@ -18,7 +20,6 @@ class Habit extends Component {
                 <div className = 'Habit__description'>
                     {this.props.description}
                 </div>
-                <button className = 'button'>Edit</button> {' '}
                 <button className = 'button'>Delete</button>
             </div>
         )
