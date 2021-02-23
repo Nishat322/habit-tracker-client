@@ -27,7 +27,7 @@ class Login extends Component {
                     </div>
                     <button className = 'button' type = 'submit'>
                         Sign In
-                    </button>
+                    </button> {' '}
                     <button className = 'button'> Cancel </button>
                 </form>
             </div>

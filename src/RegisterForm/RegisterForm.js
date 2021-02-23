@@ -40,8 +40,10 @@ class RegisterForm extends Component {
                         </label> {' '}
                         <input type = 'password' name = 'RegisterForm__repeat_password' id = 'RegisterForm__repeat_password' required/>
                     </div>
-                    <button type = 'submit'>Register</button>
-                    <button>Cancel</button>
+                    <button className = 'button' type = 'submit'>
+                        Register
+                    </button> {' '}
+                    <button className = 'button'>Cancel</button>
                 </form>
             </div>
         )
