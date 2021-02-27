@@ -4,6 +4,10 @@ import { Route } from 'react-router-dom'
 import Header from '../Header/Header'
 import HabitList from '../HabitList/HabitList'
 import HabitExpanded from '../HabitExpanded/HabitExpanded'
+import LandingPage from '../LandingPage/LandingPage'
+import LoginForm from '../LoginForm/LoginForm'
+import RegistrationForm from '../RegisterForm/RegisterForm'
+import {findHabit} from '../habits-helper'
 import STORE from '../store'
 import './App.css'
 
@@ -13,8 +17,6 @@ class App extends Component {
     super(props)
     this.state = {
       habits: [],
-      error: null
-
     }
   }
 
@@ -30,10 +32,21 @@ class App extends Component {
       <div className='App'>
         <Header/>
         <Route 
-          path = '/my-habits'
-          render = {() => <HabitList habits = {this.state.habits}/>}
+          exact path = '/'
+          component = {LandingPage}
         />
-       
+        <Route 
+          path = '/my-habits'
+          render = {() => <HabitList habits = {habits}/>}
+        />
+        <Route 
+          path = '/habit/:habitId'
+          render = {routeProps => {
+            const {habitId} = routeProps.match.params
+            const habit = findHabit(habits, habitId)
+            return <HabitExpanded {...routeProps} habit = {habit}/>
+          }}
+        />
       </div>
     )
   }

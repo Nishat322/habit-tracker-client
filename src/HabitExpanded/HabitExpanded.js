@@ -5,16 +5,17 @@ import './HabitExpanded.css'
 
 class HabitExpanded extends Component {
     render() { 
+        const {habit} = this.props
         return (  
             <div className = 'HabitExpanded'>
                 <Habit
-                    id = {this.props.id}
-                    title = {this.props.title}
-                    description = {this.props.description}
+                    id = {habit.id}
+                    title = {habit.title}
+                    description = {habit.description}
                 />
                 <div className = 'HabitExpanded__content'>
-                    <p>Your goal is : {this.props.goal} days</p>
-                    <p>{this.props.motivation}</p>
+                    <p>Your goal is : {habit.goal} days</p>
+                    <p>{habit.motivation}</p>
                 </div>
                 <div className = 'HabitExpanded__button'>
                     <button className = 'button'>

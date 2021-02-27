@@ -7,13 +7,24 @@ import './HabitList.css'
 class HabitList extends Component {
 
     render() { 
-        const habits = this.props.habits.map((habit, i) => <Habit {...habit} key = {i}/>)
         return (  
             <div className = 'HabitList'>
                 <h2>My Habits</h2>
-                {habits}
+                <ul>
+                    {this.props.habits.map(habit =>
+                        <li key = {habit.id}>
+                            <Habit 
+                                id = {habit.id}
+                                title = {habit.title}
+                                description = {habit.description}
+                            />
+                        </li>    
+                    )}
+                </ul>
                 <br/>
-                <button className = 'button'>Add New Habit</button>
+                <Link to = '/add-habit'>
+                    <button className = 'button'>Add New Habit</button>
+                </Link>                
             </div>
         )
     }
