@@ -1,26 +1,39 @@
 import React, { Component } from 'react'
+import { Route } from 'react-router-dom'
 
 import Header from '../Header/Header'
-import LandingPage from '../LandingPage/LandingPage'
-import RegisterForm from '../RegisterForm/RegisterForm'
-import LoginForm from '../LoginForm/LoginForm'
-import HabitApp from '../HabitApp/HabitApp'
-import AddHabit from '../AddHabit/AddHabit'
-
+import HabitList from '../HabitList/HabitList'
+import HabitExpanded from '../HabitExpanded/HabitExpanded'
 import STORE from '../store'
 import './App.css'
 
+
 class App extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      habits: [],
+      error: null
+
+    }
+  }
+
+  componentDidMount(){
+    //fake api call
+    setTimeout(() => this.setState(STORE), 600)
+  }
+  //ON THIS .ADDHABIT
+
   render() {
-    const {habits} = STORE
+    const {habits} = this.state
     return (
       <div className='App'>
         <Header/>
-        <LandingPage/>
-        <RegisterForm/>
-        <LoginForm/>
-        <HabitApp habits = {habits}/>
-        <AddHabit/>
+        <Route 
+          path = '/my-habits'
+          render = {() => <HabitList habits = {this.state.habits}/>}
+        />
+       
       </div>
     )
   }

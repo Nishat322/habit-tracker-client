@@ -1,17 +1,11 @@
-const users = [
-    { id: 1, fullName: 'Dunder Mifflin', username: 'dunder123', password: 'password'},
-    { id: 2, fullName: 'Another User', username: 'something', password: 'password123' }
-]
-
 const habits = [
-    {id: 1, title: 'Habit One', description: '', motivatingMessage: 'You are doing so well'},
-    {id: 2, title: 'Habit Two', description: 'some description', motivatingMessage: 'Amazing'},
-    {id: 3, title: 'Habit Three', description: 'some desciptions', motivatingMessage: 'Well Done!'}
+    {id: 1, title: 'Habit One', description: 'some descripton', motivation: 'You are doing so well', goal: 28, daysCompleted: 0}, 
+    {id: 2, title: 'Habit Two', description: 'some description', motivation: 'Amazing', goal: 4, daysCompleted: 3},
+    {id: 3, title: 'Habit Three', description: 'some desciptions', motivation: 'Well Done!', goal: 13, daysCompleted: 2}
 ]
    
 
 
 export default {
-    users,
     habits
 }
