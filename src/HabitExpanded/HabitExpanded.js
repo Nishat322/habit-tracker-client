@@ -11,11 +11,9 @@ class HabitExpanded extends Component {
                 <Habit
                     id = {habit.id}
                     title = {habit.title}
-                    description = {habit.description}
                 />
                 <div className = 'HabitExpanded__content'>
-                    <p>Your goal is : {habit.goal} days</p>
-                    <p>{habit.motivation}</p>
+                    <p>{habit.description}</p>
                 </div>
                 <div className = 'HabitExpanded__button'>
                     <button className = 'button'>

@@ -16,15 +16,11 @@ class Habit extends Component {
                     <Link to = {`/habit/${this.props.id}`}>
                         <h3>{this.props.title}</h3>
                     </Link>
-                    <button className = 'button'>
-                        DONE
-                    </button>
                 </div>
-                <div className = 'Habit__description'>
-                    {this.props.description}
+                <div className = 'Date_added'>
+                    {this.props.date_added}
                 </div>
-                <button className = 'button'>Delete</button> {' '}
-                <button className = 'button'> Edit </button>
+                <button className = 'button'>Delete</button> 
             </div>
         )
     }
